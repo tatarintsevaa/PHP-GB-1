@@ -15,6 +15,6 @@ function renderTemplate($page, $menu = '', $content = '')
     return ob_get_clean();
 }
 
-
+//Задание 1 
 
 
