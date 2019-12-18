@@ -42,8 +42,8 @@ $params = [
     ]
 ];
 switch ($page) {
-    case 'index':
-        $params['name'] = 'Вася';
+    case 'gallery':
+        $params['imgArray'] = getImageList(ROOT_DIR . '/public/' . BIG_IMG_DIR);
         break;
     case 'catalog':
         $params['catalog'] = [

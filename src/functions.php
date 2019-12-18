@@ -4,7 +4,8 @@
 //Функция, возвращает текст шаблона $page с подстановкой переменных
 //из массива $params, содержимое шабона $page подставляется в
 //переменную $content главного шаблона layout для всех страниц
-function render($page, $params = []) {
+function render($page, $params = [])
+{
     return renderTemplate(LAYOUTS_DIR . 'layout', [
         'content' => renderTemplate($page, $params),
         'menu' => renderTemplate('menu', $params),
@@ -29,4 +30,8 @@ function renderTemplate($page, $params = [])
     }
 
     return ob_get_clean();
+}
+//Функция плучения массива изображений
+function getImageList($path) {
+    return array_splice(scandir($path),2);
 }
