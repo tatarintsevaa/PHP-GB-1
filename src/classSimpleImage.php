@@ -83,5 +83,3 @@ class SimpleImage {
       $this->image = $new_image;
    }
 }
-?>
-
