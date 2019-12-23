@@ -43,7 +43,12 @@ $params = [
 ];
 switch ($page) {
     case 'gallery':
-        $params['imgArray'] = getImageList(ROOT_DIR . '/public/' . BIG_IMG_DIR);
+
+        if (isset($_POST['load'])) {
+            filesUpload();
+        }
+
+        $params['imgArray'] = getImageList( BIG_IMG_DIR);
         break;
     case 'catalog':
         $params['catalog'] = [

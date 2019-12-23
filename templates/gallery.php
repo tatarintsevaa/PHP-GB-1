@@ -1,8 +1,3 @@
-<?php
-if (isset($_POST['load'])) {
-    filesUpload();
-}
-?>
 <h1>Галерея</h1>
 <div class="gallery_box">
     <?php foreach ($imgArray as $item) : ?>
