@@ -12,6 +12,97 @@ function render($page, $params = [], $layout = 'layout')
     ]);
 }
 
+/*
+ * Функция подготовки переменных для передачи в шаблон
+ */
+function prepareVariables($page) {
+    $params = [
+        'menu' => [
+            [
+                'tittle' => 'Главная',
+                'href' => '/'
+            ],
+            [
+                'tittle' => 'Галерея',
+                'href' => '/gallery/'
+            ],
+            [
+                'tittle' => 'Галерея SQL',
+                'href' => '/gallerySQL/'
+            ],
+            [
+                'tittle' => 'Каталог',
+                'href' => '/catalog/',
+                'submenu' => [
+                    [
+                        'tittle' => 'подменю 1',
+                        'href' => 'https://geekbrains.ru'
+                    ],
+                    [
+                        'tittle' => 'подменю 2',
+                        'href' => 'https://geekbrains.ru'
+                    ]
+                ]
+            ],
+        ]
+    ];
+    switch ($page) {
+        case 'gallery':
+
+            if (isset($_POST['load'])) {
+                filesUpload();
+            }
+
+            $params['imgArray'] = getImageList( BIG_IMG_DIR);
+            break;
+
+        case 'gallerySQL':
+
+            $params['images'] = getImagesListSQL();
+            break;
+
+        case 'imageSQL':
+            $params['image'] = getOneImage($_GET['id']);
+
+            break;
+
+        case 'catalog':
+            $params['catalog'] = [
+                [
+                    'name' => 'Пицца',
+                    'price' => 24
+                ],
+                [
+                    'name' => 'Чай',
+                    'price' => 1
+                ],
+                [
+                    'name' => 'Яблоко',
+                    'price' => 12
+                ],
+            ];
+            break;
+        case 'apicatalog':
+            $params['catalog'] = [
+                [
+                    'name' => 'Пицца',
+                    'price' => 24
+                ],
+                [
+                    'name' => 'Чай',
+                    'price' => 1
+                ],
+                [
+                    'name' => 'Яблоко',
+                    'price' => 12
+                ],
+            ];
+            echo json_encode($params, JSON_UNESCAPED_UNICODE);
+            exit;
+    }
+
+    return $params;
+}
 //Функция возвращает текст шаблона $page с подставленными переменными из
 //массива $params, просто текст
 function renderTemplate($page, $params = [])
@@ -26,6 +117,7 @@ function renderTemplate($page, $params = [])
     if (file_exists($fileName)) {
         include $fileName;
     } else {
+        var_dump($fileName);
         Die("Страницы {$page} не существует.");
     }
 
@@ -47,3 +139,4 @@ function getMenu($menuArray, $class = 'menu')
     $output .= "</ul>";
     return $output;
 }
+
