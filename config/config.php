@@ -1,5 +1,5 @@
 <?php
-define('ROOT_DIR', dirname(__DIR__));
+define('ROOT_DIR',  dirname(__DIR__));
 define('TEMPLATES_DIR', '../templates/');
 define('LAYOUTS_DIR', 'layouts/');
 define('BIG_IMG_DIR', 'images/big/');
