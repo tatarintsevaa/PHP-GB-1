@@ -29779,3 +29779,575 @@ Array
 
 
 
+### 14.01.2020 03:27:07
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [images] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 30
+                    [name] => 01.jpg
+                    [views] => 0
+                )
+
+            [1] => Array
+                (
+                    [id] => 31
+                    [name] => 02.jpg
+                    [views] => 0
+                )
+
+            [2] => Array
+                (
+                    [id] => 32
+                    [name] => 03.jpg
+                    [views] => 0
+                )
+
+            [3] => Array
+                (
+                    [id] => 33
+                    [name] => 04.jpg
+                    [views] => 0
+                )
+
+            [4] => Array
+                (
+                    [id] => 34
+                    [name] => 05.jpg
+                    [views] => 0
+                )
+
+            [5] => Array
+                (
+                    [id] => 35
+                    [name] => 06.jpg
+                    [views] => 0
+                )
+
+            [6] => Array
+                (
+                    [id] => 36
+                    [name] => 07.jpg
+                    [views] => 0
+                )
+
+            [7] => Array
+                (
+                    [id] => 37
+                    [name] => 08.jpg
+                    [views] => 0
+                )
+
+            [8] => Array
+                (
+                    [id] => 38
+                    [name] => 09.jpg
+                    [views] => 0
+                )
+
+            [9] => Array
+                (
+                    [id] => 39
+                    [name] => 10.jpg
+                    [views] => 0
+                )
+
+            [10] => Array
+                (
+                    [id] => 40
+                    [name] => 11.jpg
+                    [views] => 0
+                )
+
+            [11] => Array
+                (
+                    [id] => 41
+                    [name] => 12.jpg
+                    [views] => 0
+                )
+
+            [12] => Array
+                (
+                    [id] => 42
+                    [name] => 13.jpg
+                    [views] => 0
+                )
+
+            [13] => Array
+                (
+                    [id] => 43
+                    [name] => 14.jpg
+                    [views] => 0
+                )
+
+            [14] => Array
+                (
+                    [id] => 44
+                    [name] => 15.jpg
+                    [views] => 0
+                )
+
+            [15] => Array
+                (
+                    [id] => 45
+                    [name] => newImage.jpg
+                    [views] => 0
+                )
+
+        )
+
+)
+
+
+
+### 14.01.2020 03:27:13
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [imgArray] => Array
+        (
+            [0] => 01.jpg
+            [1] => 02.jpg
+            [2] => 03.jpg
+            [3] => 04.jpg
+            [4] => 05.jpg
+            [5] => 06.jpg
+            [6] => 07.jpg
+            [7] => 08.jpg
+            [8] => 09.jpg
+            [9] => 10.jpg
+            [10] => 11.jpg
+            [11] => 12.jpg
+            [12] => 13.jpg
+            [13] => 14.jpg
+            [14] => 15.jpg
+            [15] => newImage.jpg
+        )
+
+)
+
+
+
+### 14.01.2020 03:27:17
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [images] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 30
+                    [name] => 01.jpg
+                    [views] => 0
+                )
+
+            [1] => Array
+                (
+                    [id] => 31
+                    [name] => 02.jpg
+                    [views] => 0
+                )
+
+            [2] => Array
+                (
+                    [id] => 32
+                    [name] => 03.jpg
+                    [views] => 0
+                )
+
+            [3] => Array
+                (
+                    [id] => 33
+                    [name] => 04.jpg
+                    [views] => 0
+                )
+
+            [4] => Array
+                (
+                    [id] => 34
+                    [name] => 05.jpg
+                    [views] => 0
+                )
+
+            [5] => Array
+                (
+                    [id] => 35
+                    [name] => 06.jpg
+                    [views] => 0
+                )
+
+            [6] => Array
+                (
+                    [id] => 36
+                    [name] => 07.jpg
+                    [views] => 0
+                )
+
+            [7] => Array
+                (
+                    [id] => 37
+                    [name] => 08.jpg
+                    [views] => 0
+                )
+
+            [8] => Array
+                (
+                    [id] => 38
+                    [name] => 09.jpg
+                    [views] => 0
+                )
+
+            [9] => Array
+                (
+                    [id] => 39
+                    [name] => 10.jpg
+                    [views] => 0
+                )
+
+            [10] => Array
+                (
+                    [id] => 40
+                    [name] => 11.jpg
+                    [views] => 0
+                )
+
+            [11] => Array
+                (
+                    [id] => 41
+                    [name] => 12.jpg
+                    [views] => 0
+                )
+
+            [12] => Array
+                (
+                    [id] => 42
+                    [name] => 13.jpg
+                    [views] => 0
+                )
+
+            [13] => Array
+                (
+                    [id] => 43
+                    [name] => 14.jpg
+                    [views] => 0
+                )
+
+            [14] => Array
+                (
+                    [id] => 44
+                    [name] => 15.jpg
+                    [views] => 0
+                )
+
+            [15] => Array
+                (
+                    [id] => 45
+                    [name] => newImage.jpg
+                    [views] => 0
+                )
+
+        )
+
+)
+
+
+
+### 14.01.2020 03:27:27
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [images] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 30
+                    [name] => 01.jpg
+                    [views] => 0
+                )
+
+            [1] => Array
+                (
+                    [id] => 31
+                    [name] => 02.jpg
+                    [views] => 0
+                )
+
+            [2] => Array
+                (
+                    [id] => 32
+                    [name] => 03.jpg
+                    [views] => 0
+                )
+
+            [3] => Array
+                (
+                    [id] => 33
+                    [name] => 04.jpg
+                    [views] => 0
+                )
+
+            [4] => Array
+                (
+                    [id] => 34
+                    [name] => 05.jpg
+                    [views] => 0
+                )
+
+            [5] => Array
+                (
+                    [id] => 35
+                    [name] => 06.jpg
+                    [views] => 0
+                )
+
+            [6] => Array
+                (
+                    [id] => 36
+                    [name] => 07.jpg
+                    [views] => 0
+                )
+
+            [7] => Array
+                (
+                    [id] => 37
+                    [name] => 08.jpg
+                    [views] => 0
+                )
+
+            [8] => Array
+                (
+                    [id] => 38
+                    [name] => 09.jpg
+                    [views] => 0
+                )
+
+            [9] => Array
+                (
+                    [id] => 39
+                    [name] => 10.jpg
+                    [views] => 0
+                )
+
+            [10] => Array
+                (
+                    [id] => 40
+                    [name] => 11.jpg
+                    [views] => 0
+                )
+
+            [11] => Array
+                (
+                    [id] => 41
+                    [name] => 12.jpg
+                    [views] => 0
+                )
+
+            [12] => Array
+                (
+                    [id] => 42
+                    [name] => 13.jpg
+                    [views] => 0
+                )
+
+            [13] => Array
+                (
+                    [id] => 43
+                    [name] => 14.jpg
+                    [views] => 0
+                )
+
+            [14] => Array
+                (
+                    [id] => 44
+                    [name] => 15.jpg
+                    [views] => 0
+                )
+
+            [15] => Array
+                (
+                    [id] => 45
+                    [name] => newImage.jpg
+                    [views] => 0
+                )
+
+        )
+
+)
+
+
+
