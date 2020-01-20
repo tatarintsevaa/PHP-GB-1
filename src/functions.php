@@ -15,7 +15,7 @@ function render($page, $params = [], $layout = 'layout')
 /*
  * Функция подготовки переменных для передачи в шаблон
  */
-function prepareVariables($page) {
+function prepareVariables($page, $action) {
     $params = [
         'menu' => [
             [
@@ -67,20 +67,13 @@ function prepareVariables($page) {
             break;
 
         case 'catalog':
-            $params['catalog'] = [
-                [
-                    'name' => 'Пицца',
-                    'price' => 24
-                ],
-                [
-                    'name' => 'Чай',
-                    'price' => 1
-                ],
-                [
-                    'name' => 'Яблоко',
-                    'price' => 12
-                ],
-            ];
+            $params['catalog'] = getCatalog();
+            break;
+        case 'catalogItem':
+            doFeedbackAction($params, $_GET['action']);
+            $params['item'] = getCatalogItem($_GET['id']);
+
+            $params['feedback'] = getAllFeedback();
             break;
         case 'apicatalog':
             $params['catalog'] = [

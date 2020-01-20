@@ -9,6 +9,9 @@ include dirname(__DIR__) . "/config/config.php";
 //хочет увидеть пользователь, по умолчанию это будет index
 
 $url_array = explode("/", $_SERVER['REQUEST_URI']);
+
+$action = $url_array[2];
+
 if ($url_array[1] == '') {
     $page = "index";
 } else {
@@ -18,7 +21,7 @@ if ($url_array[1] == '') {
 //Для каждой страницы готовим массив со своим набором переменных
 //для подстановки их в соотвествующий шаблон
 
-$params = prepareVariables($page);
+$params = prepareVariables($page, $action);
 
 
 

@@ -19,3 +19,5 @@ include ROOT_DIR . "/src/gallery.php";
 include ROOT_DIR . "/src/classSimpleImage.php";
 include ROOT_DIR . "/src/gallerySQL.php";
 include ROOT_DIR . "/src/db.php";
+include ROOT_DIR . "/src/feedback.php";
+include ROOT_DIR . "/src/catalog.php";

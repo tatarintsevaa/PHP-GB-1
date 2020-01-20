@@ -29,3 +29,8 @@ function getAssocResult($sql) {
         $array_result[] = $row;
     return $array_result;
 }
+
+function saveData($data) {
+    $db = getDb();
+    return strip_tags(htmlspecialchars(mysqli_real_escape_string($db, $data)));
+}
