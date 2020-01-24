@@ -1,5 +1,3 @@
-<?php
-?>
 <div class="item_box">
     <h2><?=$item['name']?></h2>
     <img src="/<?=BIG_IMG_DIR . $item['image']?>" alt="photo" width="400px">
@@ -12,16 +10,18 @@
     <hr>
     <h2>Отзывы</h2>
     <?=$message?>
-    <form action="?action=<?=$action?>" method="post">
+    <form action="/catalogItem/<?=$action?>/" method="post">
         <input hidden type="text" name="id" value="<?=$row['id']?>"><br>
+        <input hidden type="text" name="id_goods" value="<?=$item['id']?>"><br>
         <input type="text" placeholder="Имя" name="name" value="<?=$row['name']?>"><br>
         <input type="text" placeholder="Отзыв" name="feedback" value="<?=$row['feedback']?>"><br>
         <input type="submit" name="ok" value=<?=$buttonText?>><br>
     </form><br>
-    <? foreach ($feedback as $item):?>
+    <? foreach ($feedback as $value):?>
         <div>
-            <strong><?=$item['name']?></strong>: <?=$item['feedback']?>
-            <a href="/?action=edit&id=<?=$item['id']?>">[править]</a>
+            <strong><?=$item['name']?></strong>: <?=$value['feedback']?>
+            <a href="/catalogItem/?id=<?=$item['id']?>/edit/&id_feed=<?=$value['id']?>">[править]</a>
+            <a href="/catalogItem/del/?id_feed=<?=$value['id']?>&id=<?=$item['id']?>">[X]</a>
         </div>
     <?endforeach;?>
 </div>

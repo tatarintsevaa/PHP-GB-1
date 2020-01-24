@@ -10,12 +10,17 @@ include dirname(__DIR__) . "/config/config.php";
 
 $url_array = explode("/", $_SERVER['REQUEST_URI']);
 
-$action = $url_array[2];
+$action = '';
 
 if ($url_array[1] == '') {
     $page = "index";
 } else {
     $page = $url_array[1];
+    foreach ($url_array as $item) {
+        if ($item == 'edit' || $item == 'add' || $item == 'del') {
+            $action = $item;
+        }
+    }
 }
 
 //Для каждой страницы готовим массив со своим набором переменных

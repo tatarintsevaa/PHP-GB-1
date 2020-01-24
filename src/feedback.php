@@ -1,59 +1,49 @@
 <?php
 
-function getAllFeedback() {
-    $sql = "SELECT * FROM feedback ORDER BY id DESC";
+function getAllFeedback($id) {
+    $sql = "SELECT * FROM feedback WHERE id_goods={$id} ORDER BY id DESC";
     return getAssocResult($sql);
 };
 
 function doFeedbackAction(&$params, $action) {
     $db = getDb();
     $row = [];
-    $buttonText = "Отправить";
+    $params['buttonText'] = "Отправить";
+    $params['action'] = 'add';
 
     if ($action == 'add') {
+        $id_goods = $_POST['id_goods'];
         $name = strip_tags(htmlspecialchars(mysqli_real_escape_string($db, $_POST['name'])));
         $feedback = strip_tags(htmlspecialchars(mysqli_real_escape_string($db, $_POST['feedback'])));
-        $sql = "INSERT INTO `feedback` (`name`, `feedback`) VALUES ('{$name}', '{$feedback}');";
+        $sql = "INSERT INTO `feedback` (`name`, `feedback`, `id_goods`) VALUES ('{$name}', '{$feedback}','{$id_goods}')";
         $result = mysqli_query($db, $sql);
-        header("Location: /?message=OK");
+        header("Location: /catalogItem/?id={$id_goods}&message=OK");
     }
-
+    if ($action == 'edit') {
+        $id_feed = (int)$_GET['id_feed'];
+        $result = mysqli_query($db, "SELECT * FROM `feedback` WHERE id = {$id_feed}");
+        $params['row'] = mysqli_fetch_assoc($result);
+        $id_goods = $params['row']['id_goods'];
+        $params['buttonText'] = "Править";
+        $params['action'] = "save";
+        header("Location: /catalogItem/?id={$id_goods}");
+    }
+    if ($action == "save") {
+        $id = (int)$_GET['id_feed'];
+        $name = strip_tags(htmlspecialchars(mysqli_real_escape_string($db,$_POST['name'])));
+        $feedback = strip_tags(htmlspecialchars(mysqli_real_escape_string($db,$_POST['feedback'])));
+        $sql = "UPDATE `feedback` SET `name` = '{$name}', `feedback` = '{$feedback}' WHERE `feedback`.`id` = {$id};";
+        $result = mysqli_query($db, $sql);
+        header("Location: /catalogItem/?id={$id_goods}&message=edit");
+    }
+    if ($action == "del") {
+        $id_feed = (int)$_GET['id_feed'];
+        $id = (int)$_GET['id'];
+        $sql = "DELETE FROM `feedback` WHERE id = {$id_feed}";
+        executeQuery($sql);
+        header("Location: /catalogItem/?id={$id}&message=del");
+    }
     if ($_GET['message'] == 'OK') $params['message'] = 'Отзыв добавлен';
+    if ($_GET['message'] == 'edit') $params['message'] = 'Отзыв отредактированн';
+    if ($_GET['message'] == 'del') $params['message'] = 'Отзыв удален';
 }
-
-
-
-if ($_GET['action'] == 'edit') {
-    $id = (int)$_GET['id'];
-    $result = mysqli_query($db, "SELECT * FROM `feedback` WHERE id = {$id}");
-    $row = mysqli_fetch_assoc($result);
-    $buttonText = "Править";
-    $action = "save";
-}
-
-if ($_GET['action'] == "save") {
-    $id = (int)$_POST['id'];
-    $name = strip_tags(htmlspecialchars(mysqli_real_escape_string($db,$_POST['name'])));
-    $feedback = strip_tags(htmlspecialchars(mysqli_real_escape_string($db,$_POST['feedback'])));
-    $sql = "UPDATE `feedback` SET `name` = '{$name}', `feedback` = '{$feedback}' WHERE `feedback`.`id` = {$id};";
-    $result = mysqli_query($db, $sql);
-
-    header("Location: /?message=edit");
-    die();
-}
-
-if ($_GET['action'] == 'add') {
-    $name = strip_tags(htmlspecialchars(mysqli_real_escape_string($db, $_POST['name'])));
-    $feedback = strip_tags(htmlspecialchars(mysqli_real_escape_string($db, $_POST['feedback'])));
-    $sql = "INSERT INTO `feedback` (`name`, `feedback`) VALUES ('{$name}', '{$feedback}');";
-    $result = mysqli_query($db, $sql);
-    header("Location: /?message=OK");
-}
-
-$message = [
-    "OK" => "Сообщение добавлено.",
-    "edit" => "Сообщение изменено."
-];
-
-
-//$result = mysqli_query($db, "SELECT * FROM `feedback` ORDER BY id DESC ");

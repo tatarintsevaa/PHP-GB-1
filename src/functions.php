@@ -70,10 +70,10 @@ function prepareVariables($page, $action) {
             $params['catalog'] = getCatalog();
             break;
         case 'catalogItem':
-            doFeedbackAction($params, $_GET['action']);
+            doFeedbackAction($params, $action);
             $params['item'] = getCatalogItem($_GET['id']);
 
-            $params['feedback'] = getAllFeedback();
+            $params['feedback'] = getAllFeedback($_GET['id']);
             break;
         case 'apicatalog':
             $params['catalog'] = [
