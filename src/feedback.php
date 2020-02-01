@@ -2,7 +2,7 @@
 
 function getAllFeedback($id) {
     $sql = "SELECT * FROM feedback WHERE id_goods={$id} ORDER BY id DESC";
-    return getAssocResult($sql);
+    return getAssocResult($sql);    
 };
 
 function doFeedbackAction(&$params, $action) {

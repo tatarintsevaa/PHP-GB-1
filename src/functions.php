@@ -31,6 +31,10 @@ function prepareVariables($page, $action) {
                 'href' => '/gallerySQL/'
             ],
             [
+                'tittle' => 'Корзина',
+                'href' => '/cart/'
+            ],
+            [
                 'tittle' => 'Каталог',
                 'href' => '/catalog/',
                 'submenu' => [
@@ -48,32 +52,38 @@ function prepareVariables($page, $action) {
     ];
     switch ($page) {
         case 'gallery':
-
             if (isset($_POST['load'])) {
                 filesUpload();
             }
-
             $params['imgArray'] = getImageList( BIG_IMG_DIR);
             break;
-
         case 'gallerySQL':
-
             $params['images'] = getImagesListSQL();
             break;
-
         case 'imageSQL':
             $params['image'] = getOneImage($_GET['id']);
-
             break;
-
         case 'catalog':
             $params['catalog'] = getCatalog();
             break;
         case 'catalogItem':
             doFeedbackAction($params, $action);
             $params['item'] = getCatalogItem($_GET['id']);
-
             $params['feedback'] = getAllFeedback($_GET['id']);
+            break;
+        case 'cart':
+            $params['product'] = getCartProducts();
+            break;
+        case 'api':
+            /*
+             * todo добавить логику подсчета и вывода количества товаров в корзине
+             * */
+            if ($action == 'buy') {
+                addToCart($_GET['id']);
+                $qty =  getQty($_GET['id']);
+                echo json_encode(['qty' => $qty]);
+                die();
+            }
             break;
         case 'apicatalog':
             $params['catalog'] = [
