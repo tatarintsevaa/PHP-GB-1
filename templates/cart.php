@@ -8,17 +8,17 @@
     <p>Удалить</p>
 </div>
 <hr>
-<? foreach ($product as $item):?>
+<? foreach ($products as $item): ?>
     <div class="cart">
-        <p><?=$item['name']?></p>
-        <img width="100px" src="/<?=SMALL_IMG_DIR . $item['image']?>" alt="photo">
-        <p><?=$item['price']?></p>
-        <p><?=$item['qty']?></p>
-        <p><?=$item['qty']*$item['price']?></p>
-        <button class="delBtn" data-id="<?=$item['goods_id']?>">X</button>
+        <p><?= $item['name'] ?></p>
+        <img width="100px" src="/<?= SMALL_IMG_DIR . $item['image'] ?>" alt="photo">
+        <p><?= $item['price'] ?></p>
+        <p><?= $item['qty'] ?></p>
+        <p><?= $item['qty'] * $item['price'] ?></p>
+        <button class="delBtn"  data-id ="<?=$item['id']?>">X</button>
     </div>
     <hr>
-<?endforeach;?>
+<? endforeach; ?>
 
 <script>
     const delBtn = document.querySelectorAll('.delBtn');

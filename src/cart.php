@@ -1,61 +1,61 @@
 <?php
-function getCartProducts()
+function getCartProducts($session_id)
 {
     $sql = "SELECT goods.id as goods_id, goods.name as name, goods.image as image, goods.price as price,
- cart.qty as qty FROM goods, cart WHERE cart.id_good = goods.id";
+ cart.qty as qty, cart.session_id as session_id, cart.id as id FROM goods, cart WHERE cart.id_good = goods.id AND cart.session_id='{$session_id}'";
     return getAssocResult($sql);
 }
 
-function getQty()
+function getQty($session_id)
 {
-    $sql = "SELECT cart.qty FROM cart WHERE 1";
+    $sql = "SELECT cart.qty FROM cart WHERE session_id='{$session_id}'";
     $result = getAssocResult($sql);
     return array_sum(array_column($result, 'qty'));
 }
 
-function addNewProduct($id)
+function addNewProduct($id, $session_id)
 {
-    $sql = "INSERT INTO cart (id, id_good, qty) VALUES (NULL, {$id}, 1)";
+    $sql = "INSERT INTO cart (id, id_good, qty, session_id) VALUES (NULL, {$id}, 1, '{$session_id}')";
     $result = executeQuery($sql);
 }
 
-function updateQty($id, $action)
+function updateQty($id, $action, $session_id)
 {
     if ($action == 'buy') {
-        $sql = "UPDATE cart SET qty=qty+1 WHERE id_good={$id}";
+        $sql = "UPDATE cart SET qty=qty+1 WHERE id_good={$id} AND session_id='{$session_id}'";
         $result = executeQuery($sql);
     } else if ($action == 'del') {
-        $sql = "UPDATE cart SET qty=qty-1 WHERE id_good={$id}";
+        $sql = "UPDATE cart SET qty=qty-1 WHERE id={$id} AND session_id='{$session_id}'";
         $result = executeQuery($sql);
     }
 }
 
-function addToCart($id, $action)
+function addToCart($id, $action, $session_id)
 {
-    $sql = "SELECT cart.qty FROM cart WHERE id_good={$id}";
+    $sql = "SELECT cart.qty FROM cart WHERE id_good={$id} AND session_id='{$session_id}'";
     $qty = (int)getAssocResult($sql);
     if ($qty >= 1) {
-        updateQty($id, $action);
+        updateQty($id, $action, $session_id);
     } else {
-        addNewProduct($id);
+        addNewProduct($id, $session_id);
     }
 }
 
-function delProduct($id)
+function delProduct($id, $session_id)
 {
-    $sql = "DELETE FROM cart WHERE id_good={$id}";
+    $sql = "DELETE FROM cart WHERE id={$id} AND session_id='{$session_id}'";
     $result = executeQuery($sql);
 }
 
-function delFromCart($id, $action)
+function delFromCart($id, $action, $session_id)
 {
-    $sql = "SELECT cart.qty FROM cart WHERE id_good={$id}";
+    $sql = "SELECT cart.qty FROM cart WHERE id={$id} AND session_id='{$session_id}'";
     $qty = getAssocResult($sql)[0]['qty'];
     if ($qty > 1) {
-        updateQty($id, $action);
+        updateQty($id, $action, $session_id);
         return --$qty;
     } else {
-        delProduct($id);
+        delProduct($id, $session_id);
         return --$qty;
     }
 }

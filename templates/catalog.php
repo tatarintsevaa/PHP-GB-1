@@ -20,6 +20,7 @@
             let id = evt.target.dataset.id;
             fetch(`/api/buy/?id=${id}`)
                 .then((response) => response.json())
+
                 .then((data) => {
                     if (data.qty === 1) {
                         creatCartQty(data.qty);

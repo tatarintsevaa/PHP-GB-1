@@ -64,6 +64,7 @@ function prepareVariables($page, $action) {
             $params['image'] = getOneImage($_GET['id']);
             break;
         case 'catalog':
+            session_start();
             $params['catalog'] = getCatalog();
             break;
         case 'catalogItem':
@@ -72,25 +73,24 @@ function prepareVariables($page, $action) {
             $params['feedback'] = getAllFeedback($_GET['id']);
             break;
         case 'cart':
-            $params['product'] = getCartProducts();
+            session_start();
+            var_dump(session_id());
+            $params['products'] = getCartProducts(session_id());
             break;
         case 'api':
-            /*
-             * todo добавить логику подсчета и вывода количества товаров в корзине. добавить аутенификацию итд итп
-             *
-             * */
+            session_start();
             if ($action == 'buy') {
-                addToCart($_GET['id'], $action);
-                $qty =  getQty();
+                addToCart($_GET['id'], $action, session_id());
+                $qty =  getQty(session_id());
                 echo json_encode(['qty' => $qty]);
                 die();
             }elseif ($action == 'del') {
-                $newQty = delFromCart($_GET['id'], $action);
-                $qty =  getQty();
+                $newQty = delFromCart($_GET['id'], $action, session_id());
+                $qty =  getQty(session_id());
                 echo json_encode(['qty' => $qty, 'newQty' => $newQty]);
                 die();
             } else {
-                $qty =  getQty();
+                $qty =  getQty(session_id());
                 echo json_encode(['qty' => $qty]);
                 die();
             }
