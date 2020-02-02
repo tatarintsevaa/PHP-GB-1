@@ -46,4 +46,12 @@ h1 {
 .item_box {
   text-align: center; }
 
+.cart {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.delBtn {
+  height: min-content; }
+
 /*# sourceMappingURL=style.css.map */

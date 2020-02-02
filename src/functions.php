@@ -31,10 +31,6 @@ function prepareVariables($page, $action) {
                 'href' => '/gallerySQL/'
             ],
             [
-                'tittle' => 'Корзина',
-                'href' => '/cart/'
-            ],
-            [
                 'tittle' => 'Каталог',
                 'href' => '/catalog/',
                 'submenu' => [
@@ -47,6 +43,10 @@ function prepareVariables($page, $action) {
                         'href' => 'https://geekbrains.ru'
                     ]
                 ]
+            ],
+            [
+                'tittle' => 'Корзина',
+                'href' => '/cart/'
             ],
         ]
     ];
@@ -76,11 +76,21 @@ function prepareVariables($page, $action) {
             break;
         case 'api':
             /*
-             * todo добавить логику подсчета и вывода количества товаров в корзине
+             * todo добавить логику подсчета и вывода количества товаров в корзине. добавить аутенификацию итд итп
+             *
              * */
             if ($action == 'buy') {
-                addToCart($_GET['id']);
-                $qty =  getQty($_GET['id']);
+                addToCart($_GET['id'], $action);
+                $qty =  getQty();
+                echo json_encode(['qty' => $qty]);
+                die();
+            }elseif ($action == 'del') {
+                $newQty = delFromCart($_GET['id'], $action);
+                $qty =  getQty();
+                echo json_encode(['qty' => $qty, 'newQty' => $newQty]);
+                die();
+            } else {
+                $qty =  getQty();
                 echo json_encode(['qty' => $qty]);
                 die();
             }
