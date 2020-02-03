@@ -13,6 +13,7 @@ function getQty($session_id)
     return array_sum(array_column($result, 'qty'));
 }
 
+
 function addNewProduct($id, $session_id)
 {
     $sql = "INSERT INTO cart (id, id_good, qty, session_id) VALUES (NULL, {$id}, 1, '{$session_id}')";
@@ -58,4 +59,26 @@ function delFromCart($id, $action, $session_id)
         delProduct($id, $session_id);
         return --$qty;
     }
+}
+
+function totalPrice($array)
+{
+    $total = 0;
+    foreach ($array as $value) {
+        $total += (int)$value['qty'] * (int)$value['price'];
+    }
+    return $total;
+}
+
+function addNewOrder($data, $session_id)
+{
+    $parsedData = [
+        'name' => $data->name,
+        'phoneNum' => $data->phoneNum,
+    ];
+    $sql = "INSERT INTO ordres (`id`, `session_id`, `name`, `phone`) VALUES (null, '{$session_id}','{$parsedData['name']}','{$parsedData['phoneNum']}')";
+    executeQuery($sql);
+    $sql = "SELECT cart.qty as qty, goods.price as price  FROM cart, goods WHERE cart.id_good = goods.id AND session_id='{$session_id}'";
+    $order = getAssocResult($sql);
+    return totalPrice($order);
 }

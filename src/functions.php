@@ -15,7 +15,8 @@ function render($page, $params = [], $layout = 'layout')
 /*
  * Функция подготовки переменных для передачи в шаблон
  */
-function prepareVariables($page, $action) {
+function prepareVariables($page, $action)
+{
     $params = [
         'menu' => [
             [
@@ -55,7 +56,7 @@ function prepareVariables($page, $action) {
             if (isset($_POST['load'])) {
                 filesUpload();
             }
-            $params['imgArray'] = getImageList( BIG_IMG_DIR);
+            $params['imgArray'] = getImageList(BIG_IMG_DIR);
             break;
         case 'gallerySQL':
             $params['images'] = getImagesListSQL();
@@ -74,23 +75,31 @@ function prepareVariables($page, $action) {
             break;
         case 'cart':
             session_start();
-            var_dump(session_id());
             $params['products'] = getCartProducts(session_id());
+            $params['totalPrice'] = totalPrice($params['products']);
             break;
         case 'api':
             session_start();
             if ($action == 'buy') {
                 addToCart($_GET['id'], $action, session_id());
-                $qty =  getQty(session_id());
+                $qty = getQty(session_id());
                 echo json_encode(['qty' => $qty]);
                 die();
-            }elseif ($action == 'del') {
+            } elseif ($action == 'del') {
                 $newQty = delFromCart($_GET['id'], $action, session_id());
-                $qty =  getQty(session_id());
+                $qty = getQty(session_id());
                 echo json_encode(['qty' => $qty, 'newQty' => $newQty]);
                 die();
+            } elseif ($action == 'checkout') {
+                $data = json_decode(file_get_contents('php://input'));
+                $totalPrice = addNewOrder($data, session_id());
+                echo json_encode(['totalPrice' => $totalPrice]);
+                die();
+            } elseif ($action == 'newSession') {
+                session_regenerate_id();
+                die();
             } else {
-                $qty =  getQty(session_id());
+                $qty = getQty(session_id());
                 echo json_encode(['qty' => $qty]);
                 die();
             }
@@ -116,6 +125,7 @@ function prepareVariables($page, $action) {
 
     return $params;
 }
+
 //Функция возвращает текст шаблона $page с подставленными переменными из
 //массива $params, просто текст
 function renderTemplate($page, $params = [])
@@ -136,7 +146,6 @@ function renderTemplate($page, $params = [])
 
     return ob_get_clean();
 }
-
 
 
 function getMenu($menuArray, $class = 'menu')

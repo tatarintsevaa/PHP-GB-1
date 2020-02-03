@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 21 2020 г., 02:40
+-- Время создания: Фев 02 2020 г., 20:54
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.3.9
 
@@ -25,22 +25,50 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `id_good` int(11) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `session_id` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `cart`
+--
+
+INSERT INTO `cart` (`id`, `id_good`, `qty`, `session_id`) VALUES
+(29, 3, 1, '4thsinu3sq9d3krkfnufqbm3shdfdso4'),
+(30, 2, 3, '4thsinu3sq9d3krkfnufqbm3shdfdso4'),
+(31, 4, 4, '4thsinu3sq9d3krkfnufqbm3shdfdso4'),
+(33, 2, 1, '4gv3s5jv956uqn69rf19tj7iqass1tc8'),
+(34, 3, 2, '4gv3s5jv956uqn69rf19tj7iqass1tc8');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `feedback`
 --
 
 CREATE TABLE `feedback` (
   `id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
-  `feedback` text NOT NULL
+  `feedback` text NOT NULL,
+  `id_goods` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `feedback`
 --
 
-INSERT INTO `feedback` (`id`, `name`, `feedback`) VALUES
-(1, 'Вася', 'Я первый'),
-(2, 'Петр', 'Все норм');
+INSERT INTO `feedback` (`id`, `name`, `feedback`, `id_goods`) VALUES
+(1, 'Вася', 'Я первый', '1'),
+(2, 'Петр', 'Все норм', '2'),
+(138, 'Алексей ', 'супер', '2'),
+(139, 'Иван', 'Привет', '1'),
+(141, 'Алексей', 'Тест 1', '2');
 
 -- --------------------------------------------------------
 
@@ -96,11 +124,19 @@ CREATE TABLE `goods` (
 
 INSERT INTO `goods` (`id`, `name`, `price`, `image`, `description`) VALUES
 (1, 'Картина №1', 150, '01.jpg', 'Подробное описание Картины 1'),
-(2, 'Картина №2', 100, '02.jpg', 'Подробное описание Картины 2');
+(2, 'Картина №2', 100, '02.jpg', 'Подробное описание Картины 2'),
+(3, 'Картина №3', 145, '03.jpg', 'Подробное описание картины 3'),
+(4, 'Картина №4', 126, '04.jpg', 'Подробное описание картины 4');
 
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `feedback`
@@ -125,10 +161,16 @@ ALTER TABLE `goods`
 --
 
 --
+-- AUTO_INCREMENT для таблицы `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
 -- AUTO_INCREMENT для таблицы `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
 
 --
 -- AUTO_INCREMENT для таблицы `gallery`
@@ -140,7 +182,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT для таблицы `goods`
 --
 ALTER TABLE `goods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

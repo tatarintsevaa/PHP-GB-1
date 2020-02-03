@@ -25,7 +25,15 @@ function updateCartQty(qty) {
     }
 }
 
-
+function newSession() {
+    fetch('/api/newSession')
+        .then(() => {
+            document.location.href = '/';
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+}
 
 
 

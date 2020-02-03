@@ -7,7 +7,9 @@
     <script src="/js/js.js" defer></script>
 </head>
 <body>
-<?= $menu ?>
-<?= $content ?>
+<div class="container">
+    <?= $menu ?>
+    <?= $content ?>
+</div>
 </body>
 </html>
