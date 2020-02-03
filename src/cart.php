@@ -82,3 +82,26 @@ function addNewOrder($data, $session_id)
     $order = getAssocResult($sql);
     return totalPrice($order);
 }
+
+function doOrderActions($action, $id){
+    if ($action == 'buy') {
+        addToCart($id, $action, session_id());
+        $qty = getQty(session_id());
+        return json_encode(['qty' => $qty]);
+
+    } elseif ($action == 'del') {
+        $newQty = delFromCart($id, $action, session_id());
+        $qty = getQty(session_id());
+        return json_encode(['qty' => $qty, 'newQty' => $newQty]);
+    } elseif ($action == 'checkout') {
+        $data = json_decode(file_get_contents('php://input'));
+        $totalPrice = addNewOrder($data, session_id());
+        return json_encode(['totalPrice' => $totalPrice]);
+    } elseif ($action == 'newSession') {
+        session_regenerate_id();
+        exit();
+    } else {
+        $qty = getQty(session_id());
+        return json_encode(['qty' => $qty]);
+    }
+}

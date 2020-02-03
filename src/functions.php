@@ -80,29 +80,8 @@ function prepareVariables($page, $action)
             break;
         case 'api':
             session_start();
-            if ($action == 'buy') {
-                addToCart($_GET['id'], $action, session_id());
-                $qty = getQty(session_id());
-                echo json_encode(['qty' => $qty]);
-                die();
-            } elseif ($action == 'del') {
-                $newQty = delFromCart($_GET['id'], $action, session_id());
-                $qty = getQty(session_id());
-                echo json_encode(['qty' => $qty, 'newQty' => $newQty]);
-                die();
-            } elseif ($action == 'checkout') {
-                $data = json_decode(file_get_contents('php://input'));
-                $totalPrice = addNewOrder($data, session_id());
-                echo json_encode(['totalPrice' => $totalPrice]);
-                die();
-            } elseif ($action == 'newSession') {
-                session_regenerate_id();
-                die();
-            } else {
-                $qty = getQty(session_id());
-                echo json_encode(['qty' => $qty]);
-                die();
-            }
+            echo doOrderActions($action, $_GET['id']);
+            die();
             break;
         case 'apicatalog':
             $params['catalog'] = [

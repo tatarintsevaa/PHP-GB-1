@@ -136568,3 +136568,1967 @@ Array
 
 
 
+### 03.02.2020 23:15:00
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [products] => Array
+        (
+        )
+
+    [totalPrice] => 0
+)
+
+
+
+### 03.02.2020 23:15:01
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:15:05
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [catalog] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [name] => Картина №1
+                    [price] => 150
+                    [image] => 01.jpg
+                    [description] => Подробное описание Картины 1
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [name] => Картина №2
+                    [price] => 100
+                    [image] => 02.jpg
+                    [description] => Подробное описание Картины 2
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [name] => Картина №3
+                    [price] => 145
+                    [image] => 03.jpg
+                    [description] => Подробное описание картины 3
+                )
+
+            [3] => Array
+                (
+                    [id] => 4
+                    [name] => Картина №4
+                    [price] => 126
+                    [image] => 04.jpg
+                    [description] => Подробное описание картины 4
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:15:05
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:15:12
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [catalog] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [name] => Картина №1
+                    [price] => 150
+                    [image] => 01.jpg
+                    [description] => Подробное описание Картины 1
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [name] => Картина №2
+                    [price] => 100
+                    [image] => 02.jpg
+                    [description] => Подробное описание Картины 2
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [name] => Картина №3
+                    [price] => 145
+                    [image] => 03.jpg
+                    [description] => Подробное описание картины 3
+                )
+
+            [3] => Array
+                (
+                    [id] => 4
+                    [name] => Картина №4
+                    [price] => 126
+                    [image] => 04.jpg
+                    [description] => Подробное описание картины 4
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:15:13
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:15:27
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [catalog] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [name] => Картина №1
+                    [price] => 150
+                    [image] => 01.jpg
+                    [description] => Подробное описание Картины 1
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [name] => Картина №2
+                    [price] => 100
+                    [image] => 02.jpg
+                    [description] => Подробное описание Картины 2
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [name] => Картина №3
+                    [price] => 145
+                    [image] => 03.jpg
+                    [description] => Подробное описание картины 3
+                )
+
+            [3] => Array
+                (
+                    [id] => 4
+                    [name] => Картина №4
+                    [price] => 126
+                    [image] => 04.jpg
+                    [description] => Подробное описание картины 4
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:15:28
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:16:14
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [catalog] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [name] => Картина №1
+                    [price] => 150
+                    [image] => 01.jpg
+                    [description] => Подробное описание Картины 1
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [name] => Картина №2
+                    [price] => 100
+                    [image] => 02.jpg
+                    [description] => Подробное описание Картины 2
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [name] => Картина №3
+                    [price] => 145
+                    [image] => 03.jpg
+                    [description] => Подробное описание картины 3
+                )
+
+            [3] => Array
+                (
+                    [id] => 4
+                    [name] => Картина №4
+                    [price] => 126
+                    [image] => 04.jpg
+                    [description] => Подробное описание картины 4
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:16:15
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:16:15
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:16:16
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:17:38
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [catalog] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [name] => Картина №1
+                    [price] => 150
+                    [image] => 01.jpg
+                    [description] => Подробное описание Картины 1
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [name] => Картина №2
+                    [price] => 100
+                    [image] => 02.jpg
+                    [description] => Подробное описание Картины 2
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [name] => Картина №3
+                    [price] => 145
+                    [image] => 03.jpg
+                    [description] => Подробное описание картины 3
+                )
+
+            [3] => Array
+                (
+                    [id] => 4
+                    [name] => Картина №4
+                    [price] => 126
+                    [image] => 04.jpg
+                    [description] => Подробное описание картины 4
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:17:39
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:18:51
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [catalog] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [name] => Картина №1
+                    [price] => 150
+                    [image] => 01.jpg
+                    [description] => Подробное описание Картины 1
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [name] => Картина №2
+                    [price] => 100
+                    [image] => 02.jpg
+                    [description] => Подробное описание Картины 2
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [name] => Картина №3
+                    [price] => 145
+                    [image] => 03.jpg
+                    [description] => Подробное описание картины 3
+                )
+
+            [3] => Array
+                (
+                    [id] => 4
+                    [name] => Картина №4
+                    [price] => 126
+                    [image] => 04.jpg
+                    [description] => Подробное описание картины 4
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:18:52
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:19:56
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [catalog] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [name] => Картина №1
+                    [price] => 150
+                    [image] => 01.jpg
+                    [description] => Подробное описание Картины 1
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [name] => Картина №2
+                    [price] => 100
+                    [image] => 02.jpg
+                    [description] => Подробное описание Картины 2
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [name] => Картина №3
+                    [price] => 145
+                    [image] => 03.jpg
+                    [description] => Подробное описание картины 3
+                )
+
+            [3] => Array
+                (
+                    [id] => 4
+                    [name] => Картина №4
+                    [price] => 126
+                    [image] => 04.jpg
+                    [description] => Подробное описание картины 4
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:19:57
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:20:05
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [products] => Array
+        (
+            [0] => Array
+                (
+                    [goods_id] => 3
+                    [name] => Картина №3
+                    [image] => 03.jpg
+                    [price] => 145
+                    [qty] => 3
+                    [session_id] => mkdjl59vblhct0821acq1s7lma9tm87k
+                    [id] => 42
+                )
+
+            [1] => Array
+                (
+                    [goods_id] => 4
+                    [name] => Картина №4
+                    [image] => 04.jpg
+                    [price] => 126
+                    [qty] => 1
+                    [session_id] => mkdjl59vblhct0821acq1s7lma9tm87k
+                    [id] => 43
+                )
+
+        )
+
+    [totalPrice] => 561
+)
+
+
+
+### 03.02.2020 23:20:06
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:20:28
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:20:28
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:20:39
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [catalog] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [name] => Картина №1
+                    [price] => 150
+                    [image] => 01.jpg
+                    [description] => Подробное описание Картины 1
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [name] => Картина №2
+                    [price] => 100
+                    [image] => 02.jpg
+                    [description] => Подробное описание Картины 2
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [name] => Картина №3
+                    [price] => 145
+                    [image] => 03.jpg
+                    [description] => Подробное описание картины 3
+                )
+
+            [3] => Array
+                (
+                    [id] => 4
+                    [name] => Картина №4
+                    [price] => 126
+                    [image] => 04.jpg
+                    [description] => Подробное описание картины 4
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:20:40
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:20:48
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+    [products] => Array
+        (
+            [0] => Array
+                (
+                    [goods_id] => 4
+                    [name] => Картина №4
+                    [image] => 04.jpg
+                    [price] => 126
+                    [qty] => 2
+                    [session_id] => 2vuj33tcgoo82ce4jjdnpk6migoidqkl
+                    [id] => 44
+                )
+
+        )
+
+    [totalPrice] => 252
+)
+
+
+
+### 03.02.2020 23:20:49
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:21:08
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+
+### 03.02.2020 23:21:08
+Array
+(
+    [menu] => Array
+        (
+            [0] => Array
+                (
+                    [tittle] => Главная
+                    [href] => /
+                )
+
+            [1] => Array
+                (
+                    [tittle] => Галерея
+                    [href] => /gallery/
+                )
+
+            [2] => Array
+                (
+                    [tittle] => Галерея SQL
+                    [href] => /gallerySQL/
+                )
+
+            [3] => Array
+                (
+                    [tittle] => Каталог
+                    [href] => /catalog/
+                    [submenu] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [tittle] => подменю 1
+                                    [href] => https://geekbrains.ru
+                                )
+
+                            [1] => Array
+                                (
+                                    [tittle] => подменю 2
+                                    [href] => https://geekbrains.ru
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [tittle] => Корзина
+                    [href] => /cart/
+                )
+
+        )
+
+)
+
+
+

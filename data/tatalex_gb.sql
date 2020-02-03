@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 02 2020 г., 20:54
+-- Время создания: Фев 03 2020 г., 23:27
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.3.9
 
@@ -44,7 +44,16 @@ INSERT INTO `cart` (`id`, `id_good`, `qty`, `session_id`) VALUES
 (30, 2, 3, '4thsinu3sq9d3krkfnufqbm3shdfdso4'),
 (31, 4, 4, '4thsinu3sq9d3krkfnufqbm3shdfdso4'),
 (33, 2, 1, '4gv3s5jv956uqn69rf19tj7iqass1tc8'),
-(34, 3, 2, '4gv3s5jv956uqn69rf19tj7iqass1tc8');
+(34, 3, 2, '4gv3s5jv956uqn69rf19tj7iqass1tc8'),
+(36, 2, 2, '8l29aq5njh520abkctrvjgli127nf36u'),
+(37, 1, 1, '8l29aq5njh520abkctrvjgli127nf36u'),
+(38, 3, 3, 'vamj30vkapjd0jnovkehsjaoqklhmo8k'),
+(39, 2, 4, 'vamj30vkapjd0jnovkehsjaoqklhmo8k'),
+(40, 1, 2, 'vamj30vkapjd0jnovkehsjaoqklhmo8k'),
+(41, 4, 2, 'eieajfadv614gvkm2fumcj5h95j4tvh0'),
+(42, 3, 3, 'mkdjl59vblhct0821acq1s7lma9tm87k'),
+(43, 4, 1, 'mkdjl59vblhct0821acq1s7lma9tm87k'),
+(44, 4, 1, '2vuj33tcgoo82ce4jjdnpk6migoidqkl');
 
 -- --------------------------------------------------------
 
@@ -128,6 +137,59 @@ INSERT INTO `goods` (`id`, `name`, `price`, `image`, `description`) VALUES
 (3, 'Картина №3', 145, '03.jpg', 'Подробное описание картины 3'),
 (4, 'Картина №4', 126, '04.jpg', 'Подробное описание картины 4');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `ordres`
+--
+
+CREATE TABLE `ordres` (
+  `id` int(11) NOT NULL,
+  `session_id` text NOT NULL,
+  `name` text NOT NULL,
+  `phone` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `ordres`
+--
+
+INSERT INTO `ordres` (`id`, `session_id`, `name`, `phone`) VALUES
+(4, '8l29aq5njh520abkctrvjgli127nf36u', 'Алексей', '123123'),
+(9, 'vamj30vkapjd0jnovkehsjaoqklhmo8k', 'test3', '987987987'),
+(10, '8l29aq5njh520abkctrvjgli127nf36u', 'Alexey', '123123123'),
+(11, 'jusrj8f65h4u33bkel95tufick59uh13', 'Bdfy', '654654'),
+(12, 'eieajfadv614gvkm2fumcj5h95j4tvh0', 'Alexey', '123123'),
+(13, 'eji7sesaved1n92q3l1lmtq737f50i5g', 'Алексей', '12123'),
+(14, 'tvobbjkropbod42cga1afq3tgdds522i', 'Alexey', '12321312'),
+(15, 'mkdjl59vblhct0821acq1s7lma9tm87k', '123', '12312312'),
+(16, 'mkdjl59vblhct0821acq1s7lma9tm87k', '123', '12312312'),
+(17, 'mkdjl59vblhct0821acq1s7lma9tm87k', '123', '12312312'),
+(18, 'mkdjl59vblhct0821acq1s7lma9tm87k', '123', '12312312'),
+(19, 'mkdjl59vblhct0821acq1s7lma9tm87k', '123', '12312312'),
+(20, 'mkdjl59vblhct0821acq1s7lma9tm87k', 'Алексей', '213123'),
+(21, '2vuj33tcgoo82ce4jjdnpk6migoidqkl', 'Алексей', '234');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `login` text NOT NULL,
+  `password` text NOT NULL,
+  `role` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `login`, `password`, `role`) VALUES
+(1, 'admin', '$2y$10$9RdrvTsN7RaXh9YJBj2FeuRmx8nOkXYNTWjPRHbrDWPc8Lsxm2lie', 'admin');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -157,6 +219,18 @@ ALTER TABLE `goods`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `ordres`
+--
+ALTER TABLE `ordres`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -164,7 +238,7 @@ ALTER TABLE `goods`
 -- AUTO_INCREMENT для таблицы `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT для таблицы `feedback`
@@ -183,6 +257,18 @@ ALTER TABLE `gallery`
 --
 ALTER TABLE `goods`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `ordres`
+--
+ALTER TABLE `ordres`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
