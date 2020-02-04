@@ -9,15 +9,12 @@ function render($page, $params = [], $layout = 'layout')
     return renderTemplate(LAYOUTS_DIR . $layout, [
         'content' => renderTemplate($page, $params),
         'menu' => renderTemplate('menu', $params),
+        'auth' => renderTemplate('auth', $params),
     ]);
 }
 
-/*
- * Функция подготовки переменных для передачи в шаблон
- */
-function prepareVariables($page, $action)
-{
-    $params = [
+function getMenuList() {
+    return [
         'menu' => [
             [
                 'tittle' => 'Главная',
@@ -51,6 +48,17 @@ function prepareVariables($page, $action)
             ],
         ]
     ];
+}
+
+/*
+ * Функция подготовки переменных для передачи в шаблон
+ */
+function prepareVariables($page, $action)
+{
+    $params = getMenuList();
+    doAuthActions($_GET['logout'],$params, $_POST);
+
+    $params['user'] = 'admin';
     switch ($page) {
         case 'gallery':
             if (isset($_POST['load'])) {
@@ -81,6 +89,18 @@ function prepareVariables($page, $action)
         case 'api':
             session_start();
             echo doOrderActions($action, $_GET['id']);
+            die();
+            break;
+        case 'apiAuth':
+            if ($action == 'auth') {
+                $data = json_decode(file_get_contents('php://input'));
+                $parsedData = [
+                    'login' => $data->login,
+                    'pass' => $data->pass,
+                    'save' => $data->save,
+                ];
+                var_dump($parsedData);
+            }
             die();
             break;
         case 'apicatalog':

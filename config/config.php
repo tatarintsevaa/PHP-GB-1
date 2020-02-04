@@ -22,3 +22,4 @@ include ROOT_DIR . "/src/db.php";
 include ROOT_DIR . "/src/feedback.php";
 include ROOT_DIR . "/src/catalog.php";
 include ROOT_DIR . "/src/cart.php";
+include ROOT_DIR . "/src/auth.php";

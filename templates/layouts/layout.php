@@ -8,6 +8,7 @@
 </head>
 <body>
 <div class="container">
+    <?= $auth ?>
     <?= $menu ?>
     <?= $content ?>
 </div>

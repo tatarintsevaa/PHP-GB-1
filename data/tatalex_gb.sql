@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 03 2020 г., 23:27
+-- Время создания: Фев 05 2020 г., 01:00
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.3.9
 
@@ -53,7 +53,8 @@ INSERT INTO `cart` (`id`, `id_good`, `qty`, `session_id`) VALUES
 (41, 4, 2, 'eieajfadv614gvkm2fumcj5h95j4tvh0'),
 (42, 3, 3, 'mkdjl59vblhct0821acq1s7lma9tm87k'),
 (43, 4, 1, 'mkdjl59vblhct0821acq1s7lma9tm87k'),
-(44, 4, 1, '2vuj33tcgoo82ce4jjdnpk6migoidqkl');
+(44, 4, 1, '2vuj33tcgoo82ce4jjdnpk6migoidqkl'),
+(45, 2, 5, 'g59vq9lrquogq2ua3o35lo485an4eniq');
 
 -- --------------------------------------------------------
 
@@ -168,7 +169,9 @@ INSERT INTO `ordres` (`id`, `session_id`, `name`, `phone`) VALUES
 (18, 'mkdjl59vblhct0821acq1s7lma9tm87k', '123', '12312312'),
 (19, 'mkdjl59vblhct0821acq1s7lma9tm87k', '123', '12312312'),
 (20, 'mkdjl59vblhct0821acq1s7lma9tm87k', 'Алексей', '213123'),
-(21, '2vuj33tcgoo82ce4jjdnpk6migoidqkl', 'Алексей', '234');
+(21, '2vuj33tcgoo82ce4jjdnpk6migoidqkl', 'Алексей', '234'),
+(22, 'g59vq9lrquogq2ua3o35lo485an4eniq', 'Alexey', '123123123'),
+(23, 'g59vq9lrquogq2ua3o35lo485an4eniq', 'Alexey', '123123');
 
 -- --------------------------------------------------------
 
@@ -179,16 +182,16 @@ INSERT INTO `ordres` (`id`, `session_id`, `name`, `phone`) VALUES
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `login` text NOT NULL,
-  `password` text NOT NULL,
-  `role` text NOT NULL
+  `pass` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `hash` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `login`, `password`, `role`) VALUES
-(1, 'admin', '$2y$10$9RdrvTsN7RaXh9YJBj2FeuRmx8nOkXYNTWjPRHbrDWPc8Lsxm2lie', 'admin');
+INSERT INTO `users` (`id`, `login`, `pass`, `hash`) VALUES
+(1, 'admin', '$2y$10$GcuyBCmU9ja9qoU3nbvsaeaHoP3/sV5tDgY759yEGmGzrS8CdMXVy', '9063160525e39e7e0e92706.24573375');
 
 --
 -- Индексы сохранённых таблиц
@@ -238,7 +241,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT для таблицы `feedback`
@@ -262,7 +265,7 @@ ALTER TABLE `goods`
 -- AUTO_INCREMENT для таблицы `ordres`
 --
 ALTER TABLE `ordres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
