@@ -73,4 +73,14 @@ h1 {
 .red {
   color: red; }
 
+#feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #feedback input {
+    width: 200px;
+    margin-bottom: 5px; }
+  #feedback button {
+    width: 200px; }
+
 /*# sourceMappingURL=style.css.map */

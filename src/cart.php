@@ -70,6 +70,12 @@ function totalPrice($array)
     return $total;
 }
 
+function getTotalPrice($session_id) {
+    $sql = "SELECT cart.qty as qty, goods.price as price  FROM cart, goods WHERE cart.id_good = goods.id AND session_id='{$session_id}'";
+    $order = getAssocResult($sql);
+    return totalPrice($order);
+}
+
 function addNewOrder($data, $session_id)
 {
     $parsedData = [
@@ -92,7 +98,8 @@ function doOrderActions($action, $id){
     } elseif ($action == 'del') {
         $newQty = delFromCart($id, $action, session_id());
         $qty = getQty(session_id());
-        return json_encode(['qty' => $qty, 'newQty' => $newQty]);
+        $total = getTotalPrice(session_id());
+        return json_encode(['qty' => $qty, 'newQty' => $newQty, 'totalPrice' => $total]);
     } elseif ($action == 'checkout') {
         $data = json_decode(file_get_contents('php://input'));
         $totalPrice = addNewOrder($data, session_id());

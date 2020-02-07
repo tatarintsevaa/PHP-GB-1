@@ -2,7 +2,7 @@
 
 session_start();
 
-function doAuthActions($logout, &$params, $data) {
+function doAuthActions($logout, &$params, $login, $pass) {
     $params['allow'] = false;
 
     if (isset($logout)) {
@@ -17,9 +17,7 @@ function doAuthActions($logout, &$params, $data) {
     }
 
 
-    if (!empty($data)) {
-        $login = $data['login'];
-        $pass = $data['pass'];
+    if (!empty($login)) {
 
         if (!auth($login, $pass)) {
             Die('Не верный логин пароль');

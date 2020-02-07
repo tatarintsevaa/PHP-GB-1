@@ -4,7 +4,6 @@
     <p>Картинка</p>
     <p>Цена</p>
     <p>Кол-во</p>
-    <p>Сумма
     <p>Удалить</p>
 </div>
 <hr>
@@ -14,7 +13,6 @@
         <img width="100px" src="/<?= SMALL_IMG_DIR . $item['image'] ?>" alt="photo">
         <p><?= $item['price'] ?> $</p>
         <p><?= $item['qty'] ?></p>
-        <p><?= $item['qty'] * $item['price'] ?> $</p>
         <button class="delBtn" data-id="<?= $item['id'] ?>">X</button>
     </div>
     <hr>
@@ -42,11 +40,16 @@
                     updateCartQty(data.qty);
                     const newQty = data.newQty;
                     if (newQty >= 1) {
-                        elem.previousElementSibling.previousElementSibling.textContent = newQty;
+                        elem.previousElementSibling.textContent = newQty;
+                        const totalPrice = document.getElementById('total');
+                        totalPrice.innerText = data.totalPrice;
                     } else {
                         elem.parentElement.nextElementSibling.remove();
                         elem.parentElement.remove();
+                        const totalPrice = document.getElementById('total');
+                        totalPrice.innerText = data.totalPrice;
                     }
+
                 })
                 .catch((error) => {
                     console.log(error);

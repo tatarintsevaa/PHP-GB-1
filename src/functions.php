@@ -56,8 +56,11 @@ function getMenuList() {
 function prepareVariables($page, $action)
 {
     $params = getMenuList();
-    doAuthActions($_GET['logout'],$params, $_POST);
 
+    doAuthActions($_GET['logout'],$params, $_POST['login'], $_POST['pass']);
+/*
+ * todo исправить баг с отзывами.
+ * */
     $params['user'] = 'admin';
     switch ($page) {
         case 'gallery':
@@ -77,9 +80,49 @@ function prepareVariables($page, $action)
             $params['catalog'] = getCatalog();
             break;
         case 'catalogItem':
-            doFeedbackAction($params, $action);
+
             $params['item'] = getCatalogItem($_GET['id']);
             $params['feedback'] = getAllFeedback($_GET['id']);
+
+            break;
+        case 'apiFeed':
+            $data = json_decode(file_get_contents('php://input'));
+            $parsedData = [
+                'name' => $data->name,
+                'feed' => $data->feed,
+                'id_good' => $data->id_good,
+            ];
+            if ($action == 'add') {
+                $id_goods = $parsedData['id_good'];
+                $name = saveData($parsedData['name']);
+                $feedback = saveData($parsedData['feed']);
+                $sql = "INSERT INTO feedback (`name`, `feedback`, `id_goods`) VALUES ('{$name}', '{$feedback}','{$id_goods}')";
+                $result = executeQuery($sql);
+                $id_feed = mysqli_insert_id(getDb());
+                echo json_encode(['status' => $result, 'id' => $id_feed]);
+            }
+            if ($action == 'edit') {
+                $id_feed = (int)$_GET['id_feed'];
+                $sql = "SELECT * FROM `feedback` WHERE id = '{$id_feed}'";
+                $result = getAssocResult($sql)[0];
+                echo json_encode(['name' => $result['name'], 'feed' => $result['feedback']]);
+            }
+            if ($action == "save") {
+                $id = (int)$_GET['id_feed'];
+                $name = saveData($parsedData['name']);
+                $feedback = saveData($parsedData['feed']);
+                $sql = "UPDATE `feedback` SET `name` = '{$name}', `feedback` = '{$feedback}' WHERE `feedback`.`id` = {$id};";
+                $result = executeQuery($sql);
+                echo json_encode(['status' => $result]);
+
+            }
+            if ($action == "del") {
+                $id_feed = (int)$_GET['id_feed'];
+                $sql = "DELETE FROM `feedback` WHERE id = {$id_feed}";
+                $result = executeQuery($sql);
+                echo json_encode(['status' => $result]);
+            }
+            die();
             break;
         case 'cart':
             session_start();

@@ -21,8 +21,8 @@ function doFeedbackAction(&$params, $action) {
     }
     if ($action == 'edit') {
         $id_feed = (int)$_GET['id_feed'];
-        $result = mysqli_query($db, "SELECT * FROM `feedback` WHERE id = {$id_feed}");
-        $params['row'] = mysqli_fetch_assoc($result);
+        $sql = "SELECT * FROM `feedback` WHERE id = '{$id_feed}'";
+        $params['row'] = getAssocResult($sql)[0];
         $id_goods = $params['row']['id_goods'];
         $params['buttonText'] = "Править";
         $params['action'] = "save";
@@ -34,7 +34,6 @@ function doFeedbackAction(&$params, $action) {
         $feedback = strip_tags(htmlspecialchars(mysqli_real_escape_string($db,$_POST['feedback'])));
         $sql = "UPDATE `feedback` SET `name` = '{$name}', `feedback` = '{$feedback}' WHERE `feedback`.`id` = {$id};";
         $result = mysqli_query($db, $sql);
-        header("Location: /catalogItem/?id={$id_goods}&message=edit");
     }
     if ($action == "del") {
         $id_feed = (int)$_GET['id_feed'];
