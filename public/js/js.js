@@ -110,7 +110,7 @@ function addEvent(elem) {
                     const feedElem = document.createElement('div');
                     feedElem.innerHTML = `<span><strong>${name.value}</strong>: ${feed.value}</span>
                                           <a href="/" class="edit" data-id_feed="${data.id}" >[править]</a>
-                                          <a href="/" class="del">[X]</a>`;
+                                          <a href="/" class="del" data-id_feed="${data.id}">[X]</a>`;
                     document.querySelector('.feedback_list').insertAdjacentElement('afterbegin', feedElem);
                     name.value = '';
                     feed.value = '';

@@ -13,13 +13,24 @@ define('PASS', '123456');
 define('DB', 'tatalex_gb');
 
 
-include ROOT_DIR . "/src/functions.php";
-include ROOT_DIR . "/src/log.php";
-include ROOT_DIR . "/src/gallery.php";
-include ROOT_DIR . "/src/classSimpleImage.php";
-include ROOT_DIR . "/src/gallerySQL.php";
 include ROOT_DIR . "/src/db.php";
-include ROOT_DIR . "/src/feedback.php";
-include ROOT_DIR . "/src/catalog.php";
-include ROOT_DIR . "/src/cart.php";
-include ROOT_DIR . "/src/auth.php";
+include ROOT_DIR . "/src/core.php";
+
+autoload('controllers');
+autoload('models');
+
+
+
+
+//
+//
+//include ROOT_DIR . "/models/log.php";
+//include ROOT_DIR . "/models/gallery.php";
+//include ROOT_DIR . "/models/classSimpleImage.php";
+//include ROOT_DIR . "/models/gallerySQL.php";
+//include ROOT_DIR . "/models/feedback.php";
+//include ROOT_DIR . "/models/catalog.php";
+//include ROOT_DIR . "/models/cart.php";
+//include ROOT_DIR . "/models/auth.php";
+//include ROOT_DIR . "/models/menu.php";
+

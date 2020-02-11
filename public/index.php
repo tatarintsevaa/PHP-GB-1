@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //Точка входа в приложение, сюда мы попадаем каждый раз когда загружаем страницу
 
 //Первым делом подключим файл с константами настроек
@@ -16,23 +16,24 @@ if ($url_array[1] == '') {
     $page = "index";
 } else {
     $page = $url_array[1];
-//    foreach ($url_array as $item) {
-//        if ($item == 'edit' || $item == 'add' || $item == 'del') {
-//            $action = $item;
-//        }
-//    }
-
 }
 
-//Для каждой страницы готовим массив со своим набором переменных
-//для подстановки их в соотвествующий шаблон
-
-$params = prepareVariables($page, $action);
+$params = getMenuList();
 
 
+if (is_auth()) {
+    $params['allow'] = true;
+    $params['user'] = get_user();
+}
 
-_log($params);
+$controllerName = $page . 'Controller';
 
-echo render($page, $params);
+if (function_exists($controllerName)) {
+    echo $controllerName($params, $action);
+} else {
+    die("Не правильный контроллер");
+}
+
+
 
 
