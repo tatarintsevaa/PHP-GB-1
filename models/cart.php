@@ -82,7 +82,7 @@ function addNewOrder($data, $session_id)
         'name' => $data->name,
         'phoneNum' => $data->phoneNum,
     ];
-    $sql = "INSERT INTO ordres (`id`, `session_id`, `name`, `phone`) VALUES (null, '{$session_id}','{$parsedData['name']}','{$parsedData['phoneNum']}')";
+    $sql = "INSERT INTO orders (`id`, `session_id`, `name`, `phone`) VALUES (null, '{$session_id}','{$parsedData['name']}','{$parsedData['phoneNum']}')";
     executeQuery($sql);
     $sql = "SELECT cart.qty as qty, goods.price as price  FROM cart, goods WHERE cart.id_good = goods.id AND session_id='{$session_id}'";
     $order = getAssocResult($sql);

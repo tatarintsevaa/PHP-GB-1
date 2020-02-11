@@ -19,6 +19,21 @@ function apiController(&$params, $action) {
     } elseif ($action == 'newSession') {
         session_regenerate_id();
         exit();
+    } elseif ($action == 'editStatus') {
+        changeOrderStatus((int) $_GET['id'], (int) $_GET['status']);
+        $statuses = [
+            1 => 'Создан',
+            2 => 'Оплачен',
+            3 => 'Отправлен',
+        ];
+        $newStatus = "";
+        foreach ($statuses as $key => $value) {
+            if ((int) $_GET['status'] == $key) {
+                 $newStatus = $value;
+            }
+        }
+        echo json_encode(['status' => $newStatus]);
+        exit();
     } else {
         $qty = getQty(session_id());
         echo json_encode(['qty' => $qty]);
